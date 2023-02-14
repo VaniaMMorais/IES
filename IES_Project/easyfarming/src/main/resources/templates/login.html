@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="eng" xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>Easy Farming</title>
+        <link href= "css/style.css" rel="stylesheet"/>
+        <link href='https://fonts.googleapis.com/css?family=ABeeZee' rel='stylesheet'>
+        <meta nome="viewport" content=" witdth= device-width, initial-scale=1.0, maximum-scale=1.0">
+    </head>
+    <body>
+        <header>
+            <div class = "center">
+                <div class="logo"><img class="image" src="assets/Logotipo planta com folhas.png" height="150" width="150"></div><!--logo-->
+                <div class="menu">
+                    <a href="/index.html" th:href="@{/home}">Home</a>
+                </div><!--menu-->
+            </div><!--center-->
+        </header>
+        <div class="login-box">
+            <h1>Login</h1>
+            <form onsubmit="return validate()">
+                <label>Email</label>
+                <input type="email" placeholder="">
+                <label>Password</label>
+                <input type="password" placeholder="">
+                <!--<input type="button" value="Submit" >-->
+                <a>
+                    <button type="submit" >Submit</button>
+                </a>
+            </form>
+            <script>
+                function validate(){
+                    var email = document.querySelector('input[type="email"]')
+                    var password = document.querySelector('input[type="password"]')
+                    if (email.value == "ana@email.com" && password.value == "aninha123"){
+                        window.location = "userpageA"; // Redirecting to other page.
+                        return false;
+                    }
+                    if(email.value == "pedro@email.com" && password.value == "the_farmer123"){
+                        window.location = "userpageP"; // Redirecting to other page.
+                        return false;
+                    }
+                    else{
+                        alert("Invalid username or password");
+                    }
+                }
+            </script>
+        </div>
+        <div class="extras-login-signUp">
+            <img src="assets/—Pngtree—character collection of gardener big_7585259.png"height="800" width="800"/>
+        </div><!--extras-->
+    </body>
+</html>
